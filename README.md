@@ -19,9 +19,10 @@ NovaMindUltra is a responsive AI coding workspace built with Next.js, Clerk, Str
    NEXT_PUBLIC_APP_URL=http://localhost:3000
    ```
 
-3. In Clerk, enable your preferred sign-in methods and set the sign-in and sign-up URLs to `/sign-in` and `/sign-up`.
-4. In Stripe, create a recurring subscription Price and use its `price_...` ID for `STRIPE_PRICE_ID`. Add the production domain in Stripe and use the Vercel URL as `NEXT_PUBLIC_APP_URL` after deploying.
-5. Run `npm run dev` and open `http://localhost:3000`.
+3. In the Clerk Dashboard, open **User & authentication → Social connections**, enable **Google**, and follow Clerk's Google OAuth setup instructions. Configure the authorized redirect URI shown by Clerk in your Google Cloud OAuth client. Google sign-in will then appear in NovaMindUltra's Clerk sign-in and sign-up components, including the modal and dedicated `/sign-in` and `/sign-up` pages. You do not need to collect or store a user's Gmail password. Never commit OAuth client secrets; configure provider credentials in Clerk as instructed.
+4. In Clerk, set the sign-in and sign-up URLs to `/sign-in` and `/sign-up`.
+5. In Stripe, create a recurring subscription Price and use its `price_...` ID for `STRIPE_PRICE_ID`. Add the production domain in Stripe and use the Vercel URL as `NEXT_PUBLIC_APP_URL` after deploying.
+6. Run `npm run dev` and open `http://localhost:3000`.
 
 ## Deploy on Vercel
 
@@ -29,7 +30,7 @@ Import this repository and add all variables above in **Project Settings → Env
 
 ## Included features and current boundaries
 
-- Clerk sign-in/sign-up and authenticated chat API.
+- Clerk sign-in/sign-up, including Google sign-in once enabled in the Clerk Dashboard, and authenticated chat API.
 - Stripe subscription Checkout and customer billing portal. Configure Stripe and verify the subscription/webhook flow before treating paid status as an access entitlement; this starter does not yet enforce plan limits or sync subscription status into a database.
 - Saved chats persist in the current browser using localStorage. They are not yet synced between devices or tied to a user account. Do not use shared/public devices for private conversations.
 - Recent chat context is limited to 12 messages per AI request to keep requests smaller and quicker. Code is displayed in Markdown blocks; generated code is not executed.
