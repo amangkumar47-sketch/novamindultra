@@ -1,0 +1,29 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="40" x2="360" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C3AED"/>
+      <stop offset="0.5" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="96" y1="68" x2="266" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F8FAFC" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#C7D2FE" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="400" rx="36" fill="#0B1020"/>
+
+  <g transform="translate(60 60)">
+    <rect x="0" y="0" width="280" height="280" rx="72" fill="url(#bg)"/>
+    <path d="M68 206V74H110L177 165V74H212V206H170L103 115V206H68Z" fill="url(#shine)"/>
+    <path d="M198 72L220 40L242 72L274 94L242 116L220 148L198 116L166 94L198 72Z" fill="#E0F2FE" fill-opacity="0.95"/>
+    <path d="M208 58L212 74L228 78L212 82L208 98L204 82L188 78L204 74L208 58Z" fill="#F8FAFC"/>
+  </g>
+
+  <g transform="translate(390 82)">
+    <text x="0" y="120" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-3" fill="#F8FAFC">Nova</text>
+    <text x="0" y="212" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-3" fill="#A5B4FC">Mind</text>
+    <text x="0" y="304" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-3" fill="#67E8F9">Ultra</text>
+    <rect x="10" y="334" width="300" height="12" rx="6" fill="url(#bg)" opacity="0.85"/>
+  </g>
+</svg>
